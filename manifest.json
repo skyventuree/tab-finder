@@ -13,14 +13,14 @@
       "scripts": ["background.js"]
   },
   "icons": {
-    "32": "find.svg"
+    "32": "icons/find.svg"
   },
   "browser_action": {
     "browser_style": true,
     "default_title": "Tab Finder",
     "default_popup": "tabs.html",
     "default_icon": {
-        "32": "find.svg"
+        "32": "icons/burger.svg"
     }
   },
   "description": "Find and switch to your tabs quickly.",
