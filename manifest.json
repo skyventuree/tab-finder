@@ -1,8 +1,8 @@
 {
-  "author": "Chris Franson",
+  "author": "Rosetta Emerson",
   "developer": {
-    "name": "Chris Franson",
-    "url": "http://zara2stra.com"
+    "name": "Rosetta Emerson",
+    "url": "http://skyventuree.github.io/"
   },
   "applications": {
     "gecko": {
@@ -24,7 +24,7 @@
     }
   },
   "description": "Find and switch to your tabs quickly.",
-  "homepage_url": "https://github.com/chrisfranson/tab-finder",
+  "homepage_url": "https://github.com/skyventuree/tab-finder",
   "manifest_version": 2,
   "name": "Tab Finder",
   "permissions": [
@@ -38,5 +38,5 @@
         }
     }
   },
-  "version": "1.0.3"
+  "version": "0.0.4"
 }
