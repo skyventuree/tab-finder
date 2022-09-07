@@ -24,10 +24,11 @@ function init() {
         for (let tab of tabs) {
             if (counter <= limit) {
                 let tabLink = document.createElement("a");
+                let title = `${tab.title || tab.url || "Unknown tab"}`;
 
                 if (tab.active === true) tabLink.style.border = "1px solid #FFBDDA";
-
-                tabLink.textContent = `${tab.title || tab.url || "Unknown tab"}`;
+                if (title.length > 70) title = `${title.slice(0, 70)}...`;
+                tabLink.textContent = title;
                 tabLink.setAttribute("href", tab.url);
                 tabLink.classList.add("tab-link", "shown");
                 tabLink.dataset.tab_id = tab.id;
