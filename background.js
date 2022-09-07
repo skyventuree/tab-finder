@@ -22,9 +22,11 @@ function updateCount(tabId, isOnRemoved) {
 }
 
 browser.tabs.onRemoved.addListener((tabId) => {
-  updateCount(tabId, true);
+    updateCount(tabId, true);
 });
+
 browser.tabs.onCreated.addListener((tabId) => {
-  updateCount(tabId, false);
+    updateCount(tabId, false);
 });
+
 updateCount();
