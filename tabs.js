@@ -12,9 +12,6 @@ function init() {
         tabFilter.focus();
     }, 100);
 
-    // Get current tab
-
-
     // List all tabs
     getAllTabs().then((tabs) => {
         let tabsList = document.getElementById("tabs-list");
@@ -27,15 +24,15 @@ function init() {
         for (let tab of tabs) {
             if (counter <= limit) {
                 let tabLink = document.createElement("a");
-                let activeDot = "";
-                if (tab.active === true) activeDot = "• ";
-                tabLink.textContent = `${activeDot}${tab.title || tab.id}`;
+
+                if (tab.active === true) tabLink.style.border = "1px solid #FFBDDA";
+
+                tabLink.textContent = `${tab.title || tab.id}`;
                 tabLink.setAttribute("href", tab.id);
                 tabLink.classList.add("tab-link", "shown");
                 tabLink.dataset.tab_url = tab.url;
                 currentTabs.appendChild(tabLink);
             }
-
             counter += 1;
         }
 
@@ -56,10 +53,9 @@ function initFilter() {
 
     tabFilter.onkeydown = function (e) {
         var matcher = new RegExp(tabFilter.value, "gi");
-
-        switch (e.which) {
+        switch (e.key) {
             // Enter: go to the selected tab
-            case 13:
+            case "Enter":
                 if (document.getElementsByClassName("tab-link selected")[0]) {
                     document
                         .getElementsByClassName("tab-link selected")[0]
@@ -68,7 +64,7 @@ function initFilter() {
                 break;
 
             // Up arrow: Select the previous visible tab link
-            case 38:
+            case "ArrowUp":
                 if (previousAvailable(selectedTabLink)) {
                     selectedTabLink.classList.remove("selected");
                     selectedTabLink = previousAvailable(selectedTabLink);
@@ -77,7 +73,7 @@ function initFilter() {
                 break;
 
             // Down arrow: Select the next visible tab link
-            case 40:
+            case "ArrowDown":
                 if (nextAvailable(selectedTabLink)) {
                     selectedTabLink.classList.remove("selected");
                     selectedTabLink = nextAvailable(selectedTabLink);

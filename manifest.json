@@ -17,7 +17,7 @@
   },
   "browser_action": {
     "browser_style": true,
-    "default_title": "Tab Finder",
+    "default_title": "Show all tabs",
     "default_popup": "tabs.html",
     "default_icon": {
         "32": "icons/burger.svg"
