@@ -12,7 +12,7 @@ Forked and currently for personal use. Feel free to add new features too!
 
 ## TODO
 
-- [ ] Current tab indicator.
+- [x] Current tab indicator.
 - [ ] Favicon support.
 - [ ] Be able to perform action on tab (close, move and drag out tabs).
 - [ ] Tab tree support
