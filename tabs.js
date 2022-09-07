@@ -27,10 +27,10 @@ function init() {
 
                 if (tab.active === true) tabLink.style.border = "1px solid #FFBDDA";
 
-                tabLink.textContent = `${tab.title || tab.id}`;
-                tabLink.setAttribute("href", tab.id);
+                tabLink.textContent = `${tab.title || tab.url || "Unknown tab"}`;
+                tabLink.setAttribute("href", tab.url);
                 tabLink.classList.add("tab-link", "shown");
-                tabLink.dataset.tab_url = tab.url;
+                tabLink.dataset.tab_id = tab.id;
                 currentTabs.appendChild(tabLink);
             }
             counter += 1;
@@ -180,7 +180,7 @@ function getAllTabs() {
  */
 document.addEventListener("click", (e) => {
     if (e.target.classList.contains("tab-link")) {
-        var tabId = +e.target.getAttribute("href");
+        var tabId = +e.target.dataset.tab_id;
 
         getAllTabs().then((tabs) => {
             for (var tab of tabs) {
