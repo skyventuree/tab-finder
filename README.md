@@ -3,7 +3,7 @@ Find and switch to your tabs quickly.
 
 This is a fork of [Chris Franson's Tab Finder](https://github.com/chrisfranson/tab-finder) and currently modifed for personal use.
 
-I will try to make this a full addon soon.
+I don't planning on working on this anymore since I no longer having tabless view on my browser.
 
 ## Usage
 
@@ -11,16 +11,6 @@ I will try to make this a full addon soon.
 2. Type into the text input to filter tabs so that only those whose page titles or URLs contain your input are listed.
 3. Use the Up/Down arrow keys or your mouse to select a tab.
 4. Hit Enter or click a tab title to go to that tab!
-
-## Todo
-
-- [x] Current tab indicator.
-- [ ] Fix tab selector behaviour.
-- [ ] Favicon support.
-- [ ] Be able to perform action on tab (close, move and maybe drag the tab out).
-- [ ] Audio indicator and ability to mute.
-- [ ] Custom CSS support.
-- [ ] Tab tree support. (I can't promise on this.)
 
 ## Credits
 - [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) by [MDN team @ Mozilla](https://wiki.mozilla.org/MDN).
